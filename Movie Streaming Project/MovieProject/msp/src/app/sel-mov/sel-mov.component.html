@@ -1,0 +1,126 @@
+<div class="container mt-4">
+
+  <div class="row">
+    <div class="col-md-6">
+      <figure class="movie-poster"><img [src]="movie.poster" style="height: 75vh !important; width: 70%;" alt="#">
+      </figure>
+    </div>
+    <div class="col-md-6 text-light mt-5">
+      <div class="mt-5"></div>
+      <h2 class="movie-title text-center">{{movie.name}}</h2>
+      <div class="movie-summary">
+        <p>{{movie.description}}</p>
+      </div>
+      <ul class="movie-meta">
+        <li><strong>IMDb Rating: {{movie.rating}} </strong>
+          <div class=" fa-solid fa-star " style="color: #F2921D;"></div>
+        </li>
+        <li><strong>User's Average Rating: {{averageRating/20}} </strong>
+          <!-- <div class=" fa-solid fa-star " style="color: #F2921D;"></div> -->
+          <div class="rating">
+
+
+            <div class="gray-star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+            <div class="gold-star" style="width:{{averageRating}}%">
+               
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+        </div>
+        </li>
+        <li><strong>Length:</strong> {{movie.runtime}} min</li>
+        <li><strong>Premiere:</strong> {{movie.releaseDate | date}}</li>
+        <li><strong>Category:</strong> {{movie.genre}}</li>
+        <li><strong>Stars:</strong> {{movie.cast}}</li>
+      </ul>
+    </div>
+
+    <div class="row container-fluid">
+      <div class="comments-app">
+        <h1 class="text-light">Comment Section</h1>
+        <h3 class="text-light">{{message}}</h3>
+
+        <!-- From -->
+        <div class="comment-form">
+          <!-- Comment Avatar -->
+          <div class="comment-avatar">
+            <img src="https://picsum.photos/200/200">
+          </div>
+
+          <form class="form" #reviewForm="ngForm" (ngSubmit)="onSubmit(reviewForm)">
+            <div class="form-row">
+              <textarea class="input" ngModel name="review" placeholder="Add comment..." required></textarea>
+            </div>
+
+            <div class="form-row">
+              <input class="input" ngModel name="email" placeholder="Email" type="email">
+            </div>
+            <div class="form-row">
+              <input class="input" ngModel name="rating" placeholder="Rating" type="number" min="1" max="5">
+            </div>
+
+
+            <div class="form-row">
+              <!-- <input type="submit" value="Add Comment"> -->
+              <button class="btn btn-secondary">Add Comment</button>
+            </div>
+          </form>
+        </div>
+
+
+
+
+        <!-- Comment Box -->
+
+
+        <!-- Comment - Dummy -->
+        <div class="comment" *ngFor="let review of reviews">
+          <!-- Comment Avatar -->
+          <div class="comment-avatar">
+            <img src="https://picsum.photos/200/300">
+          </div>
+
+          <!-- Comment Box -->
+          <div class="comment-box text-light">
+            <div class="comment-text">{{review.review}}
+              <ng-container *ngFor="let item of [1,2,3,4,5]">
+                <i class="fa-solid fa-star" [class.selected]="item<=review.rating"></i>
+            </ng-container>
+            </div>
+            <div class="comment-footer">
+              <div class="comment-info">
+                <span class="comment-author">
+                  <a href="mailto:{{review.email}}">{{review.email}}</a>
+                </span>
+                <span class="comment-date">{{review.created_at | date}}</span>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Comment - Dummy -->
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+</div>

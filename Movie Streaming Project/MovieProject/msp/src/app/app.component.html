@@ -1,0 +1,23 @@
+<!-- Header -->
+<app-nav></app-nav>
+
+<!-- Router -->
+<router-outlet></router-outlet>
+
+<div id="loading">
+    <img id="loading-image" src="../assets/images/loader.gif" alt="Loading..." />
+  </div>
+  
+  <div *ngIf="!router.url.includes('search') && !router.url.includes('sel-mov')">
+    <!-- Banner -->
+<app-banner> </app-banner>
+
+<!-- Latest Movies -->
+<app-lat-mov></app-lat-mov>
+
+<!-- All Movies -->
+<app-all-mov ></app-all-mov>
+</div>
+
+<!-- Footer -->
+<app-footer></app-footer>

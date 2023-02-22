@@ -1,0 +1,17 @@
+<div class="container mt-3">
+    <h2 class="text-center my-3 text-light">All Movies</h2>
+    <div class="row row-cols-2 row-cols-md-4 g-4">
+      <div class="col" *ngFor="let movie of movies">
+        <div class="card" data-aos="zoom-in">
+          <img [src]="movie.poster" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title text-center">{{movie.name}}</h5>
+            <p class="card-text">{{movie.description | slice:0:100}}...</p>
+            <a href="sel-mov/{{movie.id}}">
+              <button class="btn btn-primary">Watch Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

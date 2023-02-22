@@ -1,0 +1,74 @@
+<h2 class="my-4 text-center text-light">Recent Movies</h2>
+<div id="container-movies">
+<div *ngFor="let movie of movies; let i = index;" >
+  <div class="container-movie" *ngIf="i > movies.length - 4">
+    <div class="movie">
+      <div class="movie-inside front">
+        <img [src]="movie.poster" height="100%">
+      </div>
+
+      <div class="movie-inside back text-center">
+        <div class="movie-details">
+          <h1>{{movie.name}}<br><span>{{movie.releaseDate}} - {{movie.runtime}} minutes</span></h1>
+          <ul class="movie-tags">
+            <li><a href="#">{{movie.genre}}</a></li>
+          </ul>
+          <p class="movie-synopsis">{{movie.description}}</p>
+          <a href="sel-mov/{{movie.id}}">
+            <button class="btn btn-primary">Watch Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- <div class="container-movie">
+    <div class="movie">
+
+      <div class="movie-inside front">
+        <img src="../assets/images/jurassic world.jpg" height="100%">
+      </div>
+
+      <div class="movie-inside back">
+        <div class="movie-details">
+          <h1>Lorem Ipsum<br><span>2008 - 2h12</span></h1>
+          <ul class="movie-tags">
+            <li><a href="#">Drama</a></li>
+            <li><a href="#">Crime</a></li>
+          </ul>
+          <p class="movie-synopsis">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat necessitatibus
+            quaerat velit amet voluptatibus iure, eius blanditiis cupiditate tenetur nulla excepturi laudantium
+            recusandae eveniet architecto ratione quidem veritatis repudiandae, omnis eos, quas perferendis fugit
+            molestias.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container-movie">
+    <div class="movie">
+
+      <div class="movie-inside front">
+        <img src="../assets/images/thor love of thunder.jpg" height="100%">
+      </div>
+
+      <div class="movie-inside back">
+        <div class="movie-details">
+          <div class="movie-snap"></div>
+          <h1>The assassin<br><span>2015 - 2h</span></h1>
+          <ul class="movie-tags">
+            <li><a href="#">Drama</a></li>
+            <li><a href="#">Action</a></li>
+          </ul>
+          <p class="movie-synopsis">During the ninth century, a general's young daughter is kidnapped and trained to
+            become an exceptional assassin. When she doesn't execute a mission, she is ordered to kill her betrothed,
+            forcing her to choose between love, family and the assassins.</p>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
+
+</div>
