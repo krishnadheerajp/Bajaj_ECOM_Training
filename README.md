@@ -3,7 +3,7 @@ This repository will contain the projects done during the course of this trainin
 
 1. Car Rental System Project <br/>
 This project allows user to book different cars for particular duration of time and see his bookings, the admin can add new cars available to the database
-and it will be reflected to the user as the content is dynamic. It is monolithic project.
+and it will be reflected to the user as the content is dynamic. It is monolithic project developed using PHP and MySQL database.
 
 2. Movie Streaming Project<br/>
 This project makes use of PHP Core APIs to fetch the content of available movies on the platform, user reviews, user average rating and much more.
