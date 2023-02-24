@@ -23,6 +23,6 @@ Feel free to check them out.
 
 ## For any queries, you can contact me:
 
-Email: <krishna.dheeraj@bajajfinserv.in> <saisuryadheeru@gmail.com> 
+Email: <saisuryadheeru@gmail.com> 
 
 LinkedIn: https://www.linkedin.com/in/p-krishna-dheeraj-a31738128/
