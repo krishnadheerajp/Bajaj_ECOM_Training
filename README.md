@@ -1,4 +1,4 @@
-# Bajaj_ECOM_Training
+# ECOM_Training
 This repository will contain the projects done during the course of this training. It consists the following projects:
 
 1. Car Rental System Project <br/>
